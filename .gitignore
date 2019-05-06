@@ -1,0 +1,4 @@
+bin
+vendor
+.idea
+./main_test.go
