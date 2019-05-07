@@ -1,14 +1,19 @@
-This repository is a subset of https://github.com/HydroProtocol/hydro-scaffold-dex. It is designed to start a market making bot on an existing Hydro Relayer.
+This repository is a Liquidity Module for the Hydro SDK.
 
-The default setup is designed to work with our standard SDK scaffold, which launches onto your local server. This repository will not run on its own without making changes to the underlying structure.
+Liquidity Modules allow relayers to instantly fill their orderbooks and bootstrap liquidity with minimal effort. This particular module uses a [Constant Product Market Making Model](https://github.com/HydroProtocol/amm-bots#const-product-amm), discussed in greater detail below.
+
+#### Using this repository
+
+This repository is a subset of https://github.com/HydroProtocol/hydro-scaffold-dex. It is designed to start a market making bot to provide liquidity on an existing Hydro Relayer.
+
 
 ***
 
-# Amm-bots
+# AMM Bots
 
-Automated Market Making (AMM) bots can easily provide liquidity to a marketplace through use of algorithmic market making. The algorithm used in this repository is called a [Constant Product Market Making Model](https://github.com/HydroProtocol/amm-bots#const-product-amm), discussed in greater detail below.
+Automated Market Making (AMM) bots provide liquidity to a marketplace through use of algorithmic market making.
 
-## How to run?
+## Running the AMM Bot
 
 This repository is setup to run naturally on the [Hydro Dex Scaffold](https://github.com/HydroProtocol/hydro-scaffold-dex). For use on other marketplaces, you could modify the code snippets below.
 
