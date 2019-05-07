@@ -1,11 +1,10 @@
 This repository is a Liquidity Module for the Hydro SDK.
 
-Liquidity Modules allow relayers to instantly fill their orderbooks and bootstrap liquidity with minimal effort. This particular module uses a [Constant Product Market Making Model](https://github.com/HydroProtocol/amm-bots#const-product-amm), discussed in greater detail below.
+Liquidity Modules allow relayers to instantly fill their orderbooks and bootstrap liquidity with minimal effort. This particular module uses a [Constant Product Market Making Model](https://github.com/HydroProtocol/amm-bots#constant-product-amm), discussed in greater detail below.
 
 #### Using this repository
 
 This repository is a subset of https://github.com/HydroProtocol/hydro-scaffold-dex. It is designed to start a market making bot to provide liquidity on an existing Hydro Relayer.
-
 
 ***
 
@@ -73,6 +72,10 @@ This bot runs a "constant product market maker model" (popularized in the DeFi c
 - Selling large amounts of the base token will decrease the price
 
 A typical Constant Market Making model has a continuous price curve. This bot discretizes the continuous price curve and creates a number of limit orders to simulate the curve. The order price is limited between `BOT_MAX_PRICE` and `BOT_MIN_PRICE`. The price difference between adjacent orders is `BOT_PRICE_GAP`.
+
+![Image](assets/const_product_graph.png)
+([Image Source](https://medium.com/scalar-capital/uniswap-a-unique-exchange-f4ef44f807bf))
+
 
 Constant product algorithms have a disadvantage of low inventory utilization. For example, by default it only uses 5% of your inventory when the price increases 10%. `BOT_EXPAND_INVENTORY` can help you add depth near the current price.
 
