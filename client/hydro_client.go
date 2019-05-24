@@ -309,7 +309,7 @@ func (client *HydroClient) GetTradingErc20() (baseErc20 *utils.ERC20, quoteErc20
 			quoteToken := utils.ERC20{
 				client.quoteToken,
 				market.QuoteTokenAddress,
-				market.BaseTokenDecimals,
+				market.QuoteTokenDecimals,
 				true,
 			}
 			return &baseToken, &quoteToken, nil
